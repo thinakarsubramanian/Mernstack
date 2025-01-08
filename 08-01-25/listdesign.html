@@ -1,0 +1,88 @@
+<html>
+<head>
+    <title>Listing the Data Using CSS</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: aquamarine;
+            color: rgb(89, 13, 88);
+            margin: 22px;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+            color: rgb(137, 61, 219);
+            text-shadow: 0 4px 8px rgba(137, 61, 219, 0.7);
+        }
+        .list-item {
+            max-width: 780px;
+            margin: auto;
+            background-color: rgb(150, 103, 194);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .list-item h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        ul.dynamiclist, ol.ordered {
+            padding: 20px;
+            margin: 0;
+            border-radius: 10px;
+            background-color: #ffe4e1;
+        }
+        ul.dynamiclist li, ol.ordered li {
+            margin: 10px 0;
+            padding: 10px 15px;
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            list-style-type: disc;
+        }
+        ul.dynamiclist li:hover, ol.ordered li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        ul.dynamiclist li ul, ol.ordered li ol {
+            margin: 10px 0 0 20px;
+        }
+        ul.dynamiclist li ul li, ol.ordered li ol li {
+            background: linear-gradient(135deg, #d4fc79, #96e6a1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Lists</h1>
+
+    <div class="list-item">
+        <h2>Provision List</h2>
+        <ul class="dynamiclist"> 
+            <li>Stationary Items</li>
+            <li>Candy</li>
+            <li>Spices
+                <ul>
+                    <li>Pepper</li>
+                    <li>Cardamom</li>
+                </ul>
+            </li>
+            <li>Soft Drinks</li>
+        </ul>
+
+        <h2>Ordered List</h2>
+        <ol class="ordered">
+            <li>Paper</li>
+            <li>Wrist-Watch
+                <ol>
+                    <li>Airpods</li>
+                    <li>Bombs</li>
+                </ol>
+            </li>
+            <li>Scales</li>
+        </ol>
+    </div>    
+</body>
+</html>
