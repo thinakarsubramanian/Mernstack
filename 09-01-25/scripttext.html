@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+            #tag1{
+                color: blue;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: larger;
+            }
+            #tag2:hover{
+                color:blue;
+                font-size: larger;
+            }
+
+            .marquee{
+                overflow: hidden;
+                white-space: nowrap;
+                box-sizing:border-box;
+                animation: marquee 10s 
+            }
+            #tag2{
+                transition: color 7s ease;
+                font-size: 0.3s ease;
+            }
+            @keyframes marquee{
+                from{
+                    transform: translateX(100%);
+                }
+               to {
+                    transform: translateX(-100%);
+                }
+            }
+        </style>
+    </head>
+    <body>
+     <div class="marquee"><h1>Hloosu payale loosu payale loosu payakle
+        🤪🤪🤪🤪</h1></div>
+        <p id="tag1">Test One</p>
+        <p id="tag2">Test two</p>
+        <script>
+            document.getElementById("tag2").style.fontSize="pink";
+            document.getElementById("tag2").style.fontFamily="Arial"
+            document.getElementById("tag2").style.fontSize="22px"
+        </script>
+    </body>
+</html>
